@@ -24,5 +24,20 @@ namespace LibrarySQL
         {
             InitializeComponent();
         }
+
+        private void AddEntry(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void RemoveEntry(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void Exit(object sender, RoutedEventArgs e)
+        {
+            System.Windows.Application.Current.Shutdown();
+        }
     }
 }

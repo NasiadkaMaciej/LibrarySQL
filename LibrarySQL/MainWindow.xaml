@@ -6,7 +6,25 @@
         xmlns:local="clr-namespace:LibrarySQL"
         mc:Ignorable="d"
         Title="Library Maciej Nasiadka" Height="450" Width="800">
-    <Grid>
+    <DockPanel>
+    <Menu DockPanel.Dock="Top">
+        <MenuItem Name="Akcje" Header="_Akcje">
+            <MenuItem Name="AddEntryItem" Header="_Dodaj" Click="AddEntry"/>
+            <MenuItem Name="RemoveEntryItem"  Header="_Usuń" Click="RemoveEntry"/>
+            <MenuItem Name="ExitItem" Header="_Wyjdź" Click="Exit"/>
+        </MenuItem>
+    </Menu>
+        <TabControl x:Name="LibraryTabs">
+            <TabItem Header="LoansTab">
+                <DataGrid d:ItemsSource="{d:SampleData ItemCount=5}"/>
+            </TabItem>
+            <TabItem Header="BooksTab">
+                <DataGrid d:ItemsSource="{d:SampleData ItemCount=5}"/>
+            </TabItem>
+            <TabItem Header="CustomersTab">
+                <DataGrid d:ItemsSource="{d:SampleData ItemCount=5}"/>
+            </TabItem>
+        </TabControl>
 
-    </Grid>
+    </DockPanel>
 </Window>
